@@ -4,12 +4,29 @@ import 'package:islami_app/appTheme/AppTheme.dart';
 
 import '../taps/quran_tap/quran_screeen.dart';
 
-class HomeScreen extends StatelessWidget {
-  static String routeName ="HomeScreen";
+class HomeScreen extends StatefulWidget {
+  static String routeName = "HomeScreen";
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   List<Widget> tabs = [
     Quran_tab(),
+    Quran_tab(),
+    Quran_tab(),
+    Quran_tab(),
+    Column(),
   ];
+
   int index = 0;
+
+  void changeIndex(int index) {
+    setState(() {
+      this.index = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,16 +35,16 @@ class HomeScreen extends StatelessWidget {
         extendBodyBehindAppBar: true,
         appBar: AppBar(
           title: Center(
-              child: Text(
-            AppLocalizations.of(context)!.appName,
-            style:Theme.of(context).textTheme.titleMedium,
-          ),),
+            child: Text(
+              AppLocalizations.of(context)!.appName,
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+          ),
         ),
         body: Container(
             width: double.infinity,
             height: double.infinity,
             decoration: const BoxDecoration(
-
               image: DecorationImage(
                 image: AssetImage("assets/images/background_light.png"),
                 fit: BoxFit.fill,
@@ -35,9 +52,8 @@ class HomeScreen extends StatelessWidget {
             ),
             child: tabs[index]),
         bottomNavigationBar: BottomNavigationBar(
-
-
-            currentIndex: 0,
+            onTap: changeIndex,
+            currentIndex: index,
             selectedItemColor: AppTheme.colorBlack,
             type: BottomNavigationBarType.fixed,
             items: [

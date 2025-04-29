@@ -9,60 +9,71 @@ class AppTheme {
   static Color darkGold = Color(0xFFFACC1D);
 
   static ThemeData lightTheme = ThemeData(
-      primaryColor: lightPrimary,
-      canvasColor: colorBlack,
-      cardColor: colorWhite,
-      dividerColor: lightPrimary,
-      textTheme: TextTheme(
-        titleMedium: TextStyle(
-          fontSize: 35,
-          color: colorBlack,
-          fontWeight: FontWeight.bold,
-        ),
-        bodyMedium: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          color: colorBlack,
-        ),
-        headlineSmall: TextStyle(
-          fontWeight: FontWeight.normal,
-          color: colorBlack,
-        ),
+    primaryColor: lightPrimary,
+    canvasColor: colorBlack,
+    cardColor: colorWhite,
+    dividerColor: lightPrimary,
+    textTheme: TextTheme(
+      titleMedium: TextStyle(
+        fontSize: 35,
+        color: colorBlack,
+        fontWeight: FontWeight.bold,
       ),
-      appBarTheme: AppBarTheme(
-
-        color: Colors.transparent,
-        elevation: 0,
+      bodyMedium: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: colorBlack,
       ),
-      scaffoldBackgroundColor: Colors.transparent,
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: lightPrimary,
-          selectedItemColor: colorBlack,
-          unselectedItemColor: colorWhite,
-          showUnselectedLabels: true,
-          showSelectedLabels: true,
-          selectedLabelStyle: TextStyle(color: colorBlack),
-          selectedIconTheme: IconThemeData(color: colorBlack)));
+      headlineSmall: TextStyle(
+        fontWeight: FontWeight.normal,
+        color: colorBlack,
+      ),
+    ),
+    appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(color: colorBlack),
+      color: Colors.transparent,
+      elevation: 0,
+    ),
+    scaffoldBackgroundColor: Colors.transparent,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: lightPrimary,
+        selectedItemColor: colorBlack,
+        unselectedItemColor: colorWhite,
+        showUnselectedLabels: true,
+        showSelectedLabels: true,
+        selectedLabelStyle: TextStyle(color: colorBlack),
+        selectedIconTheme: IconThemeData(color: colorBlack)),
+  );
 
   static ThemeData darkTheme = ThemeData(
-      dividerColor: darkPrimary,
-      textTheme: TextTheme(
-        titleMedium: TextStyle(
-          fontSize: 70,
-          fontWeight: FontWeight.bold,
-          color: Color(0xFFF8F8F8),
-        ),
-        bodyMedium: TextStyle(
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
-          color: Color(0xFFF8F8F8),
-        ),
-        headlineSmall:
-            TextStyle(fontWeight: FontWeight.normal, color: Color(0xFFF8F8F8)),
+    dividerColor: darkPrimary,
+    textTheme: TextTheme(
+      titleMedium: TextStyle(
+        fontSize: 70,
+        fontWeight: FontWeight.bold,
+        color: Color(0xFFF8F8F8),
       ),
-      appBarTheme: AppBarTheme(
-        color: Colors.transparent,
-        elevation: 0,
+      bodyMedium: TextStyle(
+        fontSize: 30,
+        fontWeight: FontWeight.bold,
+        color: Color(0xFFF8F8F8),
       ),
-      scaffoldBackgroundColor: Colors.transparent);
+      headlineSmall:
+          TextStyle(fontWeight: FontWeight.normal, color: Color(0xFFF8F8F8)),
+    ),
+    appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(color: colorWhite),
+      color: Colors.transparent,
+      elevation: 0,
+    ),
+    scaffoldBackgroundColor: Colors.transparent,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: darkPrimary,
+        selectedItemColor: colorBlack,
+        unselectedItemColor: colorWhite,
+        showUnselectedLabels: true,
+        showSelectedLabels: true,
+        selectedLabelStyle: TextStyle(color: colorWhite),
+        selectedIconTheme: IconThemeData(color: colorWhite)),
+  );
 }
