@@ -1,55 +1,79 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  ThemeData lightTheme = ThemeData(
-    useMaterial3: true,
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: Color(0xB7935F),
-      secondary: Color(0xFFFFFF),
-      tertiary: Color(0x242424),
-    ),
-    textTheme: const TextTheme(
+  static Color lightPrimary = Color(0xFFB7935F);
+  static Color colorBlack = Color(0xFF242424);
+  static Color colorWhite = Color(0xFFF8F8F8);
+
+  static Color darkPrimary = Color(0xFF141A2E);
+  static Color darkGold = Color(0xFFFACC1D);
+
+  static ThemeData lightTheme = ThemeData(
+    primaryColor: lightPrimary,
+    canvasColor: colorBlack,
+    cardColor: colorWhite,
+    dividerColor: lightPrimary,
+    textTheme: TextTheme(
       titleMedium: TextStyle(
+        fontSize: 35,
+        color: colorBlack,
         fontWeight: FontWeight.bold,
-        color: Color(0x242424),
       ),
       bodyMedium: TextStyle(
+        fontSize: 20,
         fontWeight: FontWeight.bold,
-        color: Color(0x242424),
+        color: colorBlack,
       ),
-      headlineSmall:
-          TextStyle(fontWeight: FontWeight.normal, color: Color(0x242424)),
+      headlineSmall: TextStyle(
+        fontWeight: FontWeight.normal,
+        color: colorBlack,
+      ),
     ),
-    appBarTheme: const AppBarTheme(
-      color: Colors.transparent,elevation: 0,
-
+    appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(color: colorBlack),
+      color: Colors.transparent,
+      elevation: 0,
     ),
-    scaffoldBackgroundColor:Colors.transparent
+    scaffoldBackgroundColor: Colors.transparent,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: lightPrimary,
+        selectedItemColor: colorBlack,
+        unselectedItemColor: colorWhite,
+        showUnselectedLabels: true,
+        showSelectedLabels: true,
+        selectedLabelStyle: TextStyle(color: colorBlack),
+        selectedIconTheme: IconThemeData(color: colorBlack)),
   );
-  ThemeData darkTheme = ThemeData(
 
-    useMaterial3: true,
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: Color(0x141A2E),
-      secondary: Color(0xFACC1D),
-      tertiary: Color(0xF8F8F8),
-    ),
-    textTheme: const TextTheme(
+  static ThemeData darkTheme = ThemeData(
+    dividerColor: darkPrimary,
+    textTheme: TextTheme(
       titleMedium: TextStyle(
+        fontSize: 70,
         fontWeight: FontWeight.bold,
-        color: Color(0xF8F8F8),
+        color: Color(0xFFF8F8F8),
       ),
       bodyMedium: TextStyle(
+        fontSize: 30,
         fontWeight: FontWeight.bold,
-        color: Color(0xF8F8F8),
+        color: Color(0xFFF8F8F8),
       ),
       headlineSmall:
-      TextStyle(fontWeight: FontWeight.normal, color: Color(0xF8F8F8)),
+          TextStyle(fontWeight: FontWeight.normal, color: Color(0xFFF8F8F8)),
     ),
-      appBarTheme: const AppBarTheme(
-        color: Colors.transparent,elevation: 0,
-
-      ),
-      scaffoldBackgroundColor:Colors.transparent
+    appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(color: colorWhite),
+      color: Colors.transparent,
+      elevation: 0,
+    ),
+    scaffoldBackgroundColor: Colors.transparent,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: darkPrimary,
+        selectedItemColor: colorBlack,
+        unselectedItemColor: colorWhite,
+        showUnselectedLabels: true,
+        showSelectedLabels: true,
+        selectedLabelStyle: TextStyle(color: colorWhite),
+        selectedIconTheme: IconThemeData(color: colorWhite)),
   );
 }
