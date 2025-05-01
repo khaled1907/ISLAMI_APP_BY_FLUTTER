@@ -1,0 +1,16 @@
+{
+"appName":"اسلامي",
+"suraNameTitle":"اسم السوره",
+"hadithNameTitle":"الاحاديث",
+"hadethNumber":"حديث رقم",
+"raidoNameTitle":"اذاعه القران الكريم",
+"sobhanAllah":"سبحان الله",
+"elhamedLAllah":"الحمد لله",
+"allahAkaber":"الله اكبر",
+"quranIconName":"قران",
+"hadithIconName":"حديث",
+"radioIconName":"راديو",
+"sebihaIconName":"سبحه",
+"settingsIconName":"الاعدادات",
+"numberOfTasabeh":"عدد المرات "
+}

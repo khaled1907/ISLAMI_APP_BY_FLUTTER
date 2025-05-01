@@ -1,0 +1,16 @@
+{
+ "appName": "Islami",
+ "suraNameTitle": "Sura Name",
+  "hadithNameTitle": "Hadith",
+  "hadethNumber":"hadeth number",
+  "radioNameTitle": "Quran Radio",
+  "sobhanAllah": "Subhan Allah",
+  "elhamedLAllah": "Alhamdulillah",
+  "allahAkaber": "Allahu Akbar",
+  "quranIconName": "Quran",
+  "hadithIconName": "Hadith",
+  "radioIconName": "Radio",
+  "sebihaIconName": "Tasbeeh",
+  "settingsIconName": "Settings",
+  "numberOfTasabeh": "Number of Times"
+}
