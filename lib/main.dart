@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale presentLocal = Locale('en');
+  Locale presentLocal = Locale('ar');
 
   void changeLocal(Locale locale) {
     setState(() {
@@ -30,6 +30,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system,
       locale: presentLocal,
       localizationsDelegates: const [
         AppLocalizations.delegate, // Add this line
@@ -44,6 +45,10 @@ class _MyAppState extends State<MyApp> {
       home: HomeScreen(),
       initialRoute: HomeScreen.routeName,
       routes: {
+
+
+
+
         ShowSuraDetalis.routeName: (context) => ShowSuraDetalis(),
         HomeScreen.routeName: (context) => HomeScreen(),
         ShowHadethDetails.routeName: (context) => ShowHadethDetails(),

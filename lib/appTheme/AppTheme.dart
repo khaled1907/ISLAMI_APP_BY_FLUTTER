@@ -47,7 +47,7 @@ class AppTheme {
 
   static ThemeData darkTheme = ThemeData(
     primaryColor: darkGold,
-    canvasColor: Colors.white,
+    canvasColor: colorWhite,
     cardColor: colorBlack,
     dividerColor: darkGold,
     textTheme: TextTheme(
