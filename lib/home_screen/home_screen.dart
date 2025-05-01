@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/appTheme/AppTheme.dart';
-
-import '../taps/quran_tap/quran_screeen.dart';
+import 'package:islami_app/taps/hadeth_tap/hadeth_screen.dart';
+import '../taps/quran_tap/quran_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = "HomeScreen";
@@ -14,13 +14,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List<Widget> tabs = [
     Quran_tab(),
-    Quran_tab(),
+    Hadeth_tap(),
     Quran_tab(),
     Quran_tab(),
     Column(),
   ];
 
-  int index = 0;
+  int index = 1;
 
   void changeIndex(int index) {
     setState(() {
@@ -54,7 +54,6 @@ class _HomeScreenState extends State<HomeScreen> {
         bottomNavigationBar: BottomNavigationBar(
             onTap: changeIndex,
             currentIndex: index,
-            selectedItemColor: AppTheme.colorBlack,
             type: BottomNavigationBarType.fixed,
             items: [
               BottomNavigationBarItem(

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/taps/quran_tap/put_aya_number.dart';
 
-
-
 class ShowSuraDetalis extends StatefulWidget {
   static String routeName = "ShowSuraDetalis";
 
@@ -40,21 +38,17 @@ class _ShowSuraDetalisState extends State<ShowSuraDetalis> {
               body: Center(
                 heightFactor: 1,
                 child: Container(
-
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.white,
                   ),
-                 width: MediaQuery.of(context).size.width * 0.7,
-
-
+                  width: MediaQuery.of(context).size.width * 0.7,
                   child: ListView.separated(
                       shrinkWrap: true,
-
                       padding: EdgeInsets.all(0),
                       itemBuilder: (context, index) {
-
-                        return PutAyaNumber(index: index,verses: verses[index]);
+                        return PutAyaNumber(
+                            index: index, verses: verses[index]);
                       },
                       separatorBuilder: (context, index) => const Divider(
                             thickness: 2,
@@ -72,7 +66,7 @@ class _ShowSuraDetalisState extends State<ShowSuraDetalis> {
 
     setState(() {
       verses = lines;
-      verses=verses.where((v) => v.trim().isNotEmpty).toList();
+      verses = verses.where((v) => v.trim().isNotEmpty).toList();
     });
   }
 }
