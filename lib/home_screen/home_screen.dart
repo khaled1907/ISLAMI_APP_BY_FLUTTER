@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami_app/appTheme/AppTheme.dart';
 import 'package:islami_app/taps/hadeth_tap/hadeth_screen.dart';
 import '../taps/quran_tap/quran_screen.dart';
+import '../taps/radio_tap/radio_screen.dart';
 import '../taps/tasbeh_tap/tasbeh_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Quran_tab(),
     Hadeth_tap(),
     TasbehScreen(),
-    Quran_tab(),
+    RadioScreen(),
     Column(),
   ];
 
