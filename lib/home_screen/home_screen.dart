@@ -3,6 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/appTheme/AppTheme.dart';
 import 'package:islami_app/taps/hadeth_tap/hadeth_screen.dart';
 import '../taps/quran_tap/quran_screen.dart';
+import '../taps/tasbeh_tap/tasbeh_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = "HomeScreen";
@@ -15,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> tabs = [
     Quran_tab(),
     Hadeth_tap(),
-    Quran_tab(),
+    TasbehScreen(),
     Quran_tab(),
     Column(),
   ];
