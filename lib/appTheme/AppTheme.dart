@@ -20,7 +20,7 @@ class AppTheme {
         fontWeight: FontWeight.bold,
       ),
       bodyMedium: TextStyle(
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: FontWeight.bold,
         color: colorBlack,
       ),
@@ -46,20 +46,25 @@ class AppTheme {
   );
 
   static ThemeData darkTheme = ThemeData(
-    dividerColor: darkPrimary,
+    primaryColor: darkGold,
+    canvasColor: Colors.white,
+    cardColor: colorBlack,
+    dividerColor: darkGold,
     textTheme: TextTheme(
       titleMedium: TextStyle(
-        fontSize: 70,
+        fontSize: 35,
         fontWeight: FontWeight.bold,
         color: Color(0xFFF8F8F8),
       ),
       bodyMedium: TextStyle(
-        fontSize: 30,
+        fontSize: 25,
         fontWeight: FontWeight.bold,
         color: Color(0xFFF8F8F8),
       ),
-      headlineSmall:
-          TextStyle(fontWeight: FontWeight.normal, color: Color(0xFFF8F8F8)),
+      headlineSmall: TextStyle(
+        fontWeight: FontWeight.normal,
+        color: Color(0xFFF8F8F8),
+      ),
     ),
     appBarTheme: AppBarTheme(
       iconTheme: IconThemeData(color: colorWhite),
@@ -69,11 +74,12 @@ class AppTheme {
     scaffoldBackgroundColor: Colors.transparent,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: darkPrimary,
-        selectedItemColor: colorBlack,
+        selectedItemColor: darkGold,
         unselectedItemColor: colorWhite,
         showUnselectedLabels: true,
         showSelectedLabels: true,
-        selectedLabelStyle: TextStyle(color: colorWhite),
-        selectedIconTheme: IconThemeData(color: colorWhite)),
+
+//        selectedLabelStyle: TextStyle(color: darkGold),
+        selectedIconTheme: IconThemeData(color: darkGold)),
   );
 }
