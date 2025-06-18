@@ -28,6 +28,16 @@ class AppTheme {
         fontWeight: FontWeight.normal,
         color: colorBlack,
       ),
+
+
+
+
+      bodyLarge: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.bold,
+        color: lightPrimary,
+      ),
+
     ),
     appBarTheme: AppBarTheme(
       iconTheme: IconThemeData(color: colorBlack),
@@ -50,7 +60,7 @@ class AppTheme {
     canvasColor: colorWhite,
     cardColor: colorBlack,
     dividerColor: darkGold,
-    textTheme: TextTheme(
+    textTheme:  TextTheme(
       titleMedium: TextStyle(
         fontSize: 35,
         fontWeight: FontWeight.bold,
@@ -65,7 +75,16 @@ class AppTheme {
         fontWeight: FontWeight.normal,
         color: Color(0xFFF8F8F8),
       ),
+
+
+
+      bodyLarge: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.bold,
+        color: darkGold,
+      ),
     ),
+
     appBarTheme: AppBarTheme(
       iconTheme: IconThemeData(color: colorWhite),
       color: Colors.transparent,

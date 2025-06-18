@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/taps/quran_tap/put_aya_number.dart';
+import 'package:provider/provider.dart';
+
+import '../../providers/app_config_provider.dart';
 
 class ShowSuraDetalis extends StatefulWidget {
   static String routeName = "ShowSuraDetalis";
@@ -14,7 +17,7 @@ class _ShowSuraDetalisState extends State<ShowSuraDetalis> {
 
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)!.settings.arguments as ShowSuraDetalisArg;
-
+    var provider = Provider.of<AppConfigProvider>(context);
     if (verses.isEmpty) {
       loadFile(args.index);
     }
@@ -22,12 +25,15 @@ class _ShowSuraDetalisState extends State<ShowSuraDetalis> {
         ? Center(child: CircularProgressIndicator())
         : Stack(children: [
             Image.asset(
-              "assets/images/background_light.png",
+              provider.isDark()
+                  ? "assets/images/back_ground_dark.png"
+                  : "assets/images/background_light.png",
               fit: BoxFit.fill,
               height: double.infinity,
               width: double.infinity,
             ),
             Scaffold(
+
               appBar: AppBar(
                 title: Text(
                   args.Name,
@@ -38,9 +44,11 @@ class _ShowSuraDetalisState extends State<ShowSuraDetalis> {
               body: Center(
                 heightFactor: 1,
                 child: Container(
+
                   decoration: BoxDecoration(
+
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
+                    color: Theme.of(context).cardColor,
                   ),
                   width: MediaQuery.of(context).size.width * 0.7,
                   child: ListView.separated(

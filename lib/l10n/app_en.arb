@@ -12,5 +12,11 @@
   "radioIconName": "Radio",
   "sebihaIconName": "Tasbeeh",
   "settingsIconName": "Settings",
-  "numberOfTasabeh": "Number of Times"
+  "numberOfTasabeh": "Number of Times",
+  "languageTitleName":"Language",
+  "themeType":"Theming",
+  "english":"English",
+  "arabic":"Arabic",
+  "light":"Light",
+  "dark":"Dark"
 }

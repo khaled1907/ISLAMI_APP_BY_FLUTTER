@@ -12,5 +12,11 @@
 "radioIconName":"راديو",
 "sebihaIconName":"سبحه",
 "settingsIconName":"الاعدادات",
-"numberOfTasabeh":"عدد المرات "
+"numberOfTasabeh":"عدد المرات ",
+"languageTitleName":"اللغه",
+"themeType":"النظام",
+ "english":"الانجليزيه",
+  "arabic":"العربيه",
+  "light":"مضيء",
+  "dark":"ليلي"
 }
