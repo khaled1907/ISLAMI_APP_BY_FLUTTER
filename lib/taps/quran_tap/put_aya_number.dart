@@ -11,8 +11,9 @@ class PutAyaNumber extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Text(
+       textDirection:TextDirection.rtl,
         "$verses (${index + 1})",
-        style: Theme.of(context).textTheme.bodyMedium,
+        style: TextStyle(color: Theme.of(context).primaryColor,),
         textAlign: TextAlign.center,
       ),
     );

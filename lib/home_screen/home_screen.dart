@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/taps/hadeth_tap/hadeth_screen.dart';
+import 'package:provider/provider.dart';
+import '../providers/app_config_provider.dart';
 import '../taps/quran_tap/quran_screen.dart';
 import '../taps/radio_tap/radio_screen.dart';
+import '../taps/settings_tap/settings_screen.dart';
 import '../taps/tasbeh_tap/tasbeh_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,10 +21,10 @@ class _HomeScreenState extends State<HomeScreen> {
     Hadeth_tap(),
     TasbehScreen(),
     RadioScreen(),
-    Column(),
+    SettinsScreen(),
   ];
 
-  int index = 1;
+  int index = 4;
 
   void changeIndex(int index) {
     setState(() {
@@ -31,6 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppConfigProvider>(context);
     return Scaffold(
         backgroundColor: Colors.transparent,
         extendBodyBehindAppBar: true,
@@ -45,9 +49,11 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Container(
             width: double.infinity,
             height: double.infinity,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/images/background_light.png"),
+                image: provider.isDark()
+                    ? AssetImage("assets/images/back_ground_dark.png")
+                    : AssetImage("assets/images/background_light.png"),
                 fit: BoxFit.fill,
               ),
             ),
